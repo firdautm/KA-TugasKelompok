@@ -149,9 +149,16 @@
                 }
               ],
               "threatFrequency": {
-                "spoofing": 1,
+                "spoofing": 2,
                 "repudiation": 0
               }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -402,8 +409,8 @@
                 "text": "Backend \npresensi"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -500,12 +507,47 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "af95cbf0-e295-4dd8-aa31-038f27407fb8",
+                  "title": "Dosen atau admin menyangkal perubahan sesi atau data kehadiran",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "Jika dosen atau admin dapat menutup sesi atau mengubah catatan kehadiran tanpa jejak audit yang memadai, maka pelaku dapat menyangkal tindakannya dan sengketa kehadiran tidak dapat dibuktikan. Asumsi: log audit belum dijelaskan sehingga dianggap tidak memadai.",
+                  "mitigation": "Mitigations: Log audit yang tidak dapat diubah (siapa, kapan, aksi, nilai sebelum dan sesudah); penyimpanan log terpisah dari data utama.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": "4"
+                },
+                {
+                  "id": "1f74271a-c9d7-4505-b800-adb41a32f365",
+                  "title": "Mahasiswa membuka atau menutup sesi kelas lewat manipulasi request",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Elevation of privilege",
+                  "description": "Jika mahasiswa dapat mengubah parameter request (ID kelas atau peran) pada fungsi buka/tutup sesi, maka ia dapat bertindak seperti dosen pengampu, menutup sesi lebih awal atau membuka sesi palsu, sehingga presensi kelas terganggu. Asumsi: peran dibaca dari token dan keputusan otorisasi ada di logika backend.",
+                  "mitigation": "Backend menentukan peran dari token yang sudah diverifikasi, bukan dari parameter request; verifikasi pada setiap request buka/tutup sesi bahwa pemanggil adalah dosen pengampu kelas tersebut.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 10,
+                  "score": "6"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 1
+              }
             }
           },
           {
@@ -812,7 +854,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -833,13 +876,32 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
+              "threats": [
+                {
+                  "id": "f628649d-b424-46a2-83c2-33a111b10c8d",
+                  "title": "QR layar kelas",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Jika QR code yang ditampilkan pada Browser dosen di layar kelas difoto dan disebarkan ke mahasiswa yang tidak berada di ruang kelas, maka informasi token sesi presensi bocor ke pihak di luar kelas sehingga orang di luar kelas dapat melakukan presensi. Asumsi: QR code bersifat statis dan tetap berlaku selama maksimal 5 menit sebelum sesi ditutup dosen. Dampak: kerahasiaan token sesi presensi terkompromi dan data kehadiran tidak mencerminkan kehadiran fisik di kelas.",
+                  "mitigation": "Token QR dirotasi tiap 30 detik, cek lokasi atau jaringan kampus, Log perangkat.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 8,
+                  "score": "6"
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
             },
             "labels": [
               "1. Login akun kampus\n2. Scan QR"
@@ -911,7 +973,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -932,13 +995,32 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": true,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
+              "threats": [
+                {
+                  "id": "d0f38046-f3e3-481b-bcef-ddd84e08520d",
+                  "title": "Manipulasi atau Replay Request Scan QR pada Aliran Browser ke Backend Presensi",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Jika penyerang mengubah parameter request scan QR (seperti mengganti ID sesi) atau mengirim ulang (replay) request scan setelah masa berlaku sesi 5 menit habis pada aliran dari Browser menuju Backend Presensi, maka bisa terjadi pencatatan presensi di luar waktu/sesi yang sah atau di kelas yang salah. \nAsumsi: komunikasi menggunakan HTTPS/TLS, tetapi validasi waktu sesi, keanggotaan kelas, dan keunikan/keaslian request bergantung pada pemrosesan di Backend Presensi. \nDampak: presensi masuk di luar jam atau di kelas yang salah sehingga integritas catatan kehadiran terganggu.",
+                  "mitigation": "Validasi waktu dan sesi di server, token ditandatangani, nonce atau token sekali pakai.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": "6"
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
             },
             "labels": [
               "Request \nrekapan"
@@ -952,17 +1034,12 @@
               "cell": "8355df90-4a1d-49b1-bba6-37c3c7d6c0f8",
               "port": "428f86d7-3e5f-4313-9168-3a0ef0d5bf44"
             },
-            "vertices": [],
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead"
-              ],
-              "name": null
-            }
+            "vertices": [
+              {
+                "x": 690,
+                "y": -90
+              }
+            ]
           },
           {
             "shape": "flow",
@@ -1015,7 +1092,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -1036,13 +1114,32 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": true,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
+              "threats": [
+                {
+                  "id": "40b60ebb-580a-452d-bc33-92063ba546fc",
+                  "title": "Lonjakan Permintaan Validasi Presensi Menjelang Batas Waktu Sesi 5 Menit",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "Jika banyak permintaan pemindaian QR dan validasi presensi dikirim secara bersamaan ke Backend Presensi (terutama menjelang batas waktu sesi 5 menit berakhir), maka sistem dapat mengalami kelebihan beban sehingga layanan menjadi lambat atau tidak merespons. \nAsumsi: kapasitas pemrosesan Backend Presensi dan koneksi ke Database akademik belum dilengkapi pembatasan trafik. \nDampak: mahasiswa yang berada di kelas gagal tercatat hadir sebelum sesi ditutup atau berakhir. ",
+                  "mitigation": "Terapkan pembatasan laju permintaan (rate limiting) per pengguna/IP pada Backend Presensi, optimalkan indeks dan query baca/tulis pada Database akademik, serta atur konfigurasi timeout dan connection pooling yang memadai.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 9,
+                  "score": "4"
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 1
+              }
             },
             "labels": [
               "Baca dan tulis\nsetiap sesi"
@@ -1266,73 +1363,13 @@
                 "x": 750,
                 "y": 140
               }
-            ],
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead"
-              ],
-              "name": null
-            }
+            ]
           }
         ]
       }
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 1
+    "threatTop": 10
   }
 }
