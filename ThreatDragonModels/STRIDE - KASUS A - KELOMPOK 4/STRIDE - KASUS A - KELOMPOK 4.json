@@ -21,8 +21,8 @@
         "cells": [
           {
             "position": {
-              "x": 248.75,
-              "y": -220
+              "x": 207.5,
+              "y": -175
             },
             "size": {
               "width": 112.5,
@@ -138,8 +138,8 @@
           },
           {
             "position": {
-              "x": 248.75,
-              "y": -120
+              "x": 207.5,
+              "y": -65
             },
             "size": {
               "width": 112.5,
@@ -255,7 +255,7 @@
           },
           {
             "position": {
-              "x": 248.75,
+              "x": 198.75,
               "y": -310
             },
             "size": {
@@ -372,131 +372,11 @@
           },
           {
             "position": {
-              "x": 495,
-              "y": -120
+              "x": 640,
+              "y": -50
             },
             "size": {
-              "width": 250,
-              "height": 90
-            },
-            "attrs": {
-              "text": {
-                "text": "Layanan \nautentikasi \nkampus"
-              },
-              "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
-                "strokeDasharray": null
-              }
-            },
-            "visible": true,
-            "shape": "process",
-            "ports": {
-              "groups": {
-                "top": {
-                  "position": "top",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "right": {
-                  "position": "right",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "bottom": {
-                  "position": "bottom",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "left": {
-                  "position": "left",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                }
-              },
-              "items": [
-                {
-                  "group": "top",
-                  "id": "618aefb0-9032-4f64-9a69-80247d35ad9c"
-                },
-                {
-                  "group": "right",
-                  "id": "5e83aaff-dae9-4159-9725-98db899fbeba"
-                },
-                {
-                  "group": "bottom",
-                  "id": "51ede02a-6dcb-4ae7-806e-1286c6a7e888"
-                },
-                {
-                  "group": "left",
-                  "id": "428f86d7-3e5f-4313-9168-3a0ef0d5bf44"
-                }
-              ]
-            },
-            "id": "66e80952-9cee-4760-af84-4e225776639c",
-            "zIndex": 4,
-            "data": {
-              "type": "tm.Process",
-              "name": "Layanan \nautentikasi \nkampus",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "handlesCardPayment": false,
-              "handlesGoodsOrServices": false,
-              "isWebApplication": false,
-              "privilegeLevel": "",
-              "threats": []
-            }
-          },
-          {
-            "position": {
-              "x": 550,
-              "y": -230
-            },
-            "size": {
-              "width": 140,
+              "width": 70,
               "height": 70
             },
             "attrs": {
@@ -511,6 +391,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 5,
             "ports": {
               "groups": {
                 "top": {
@@ -594,7 +475,6 @@
               ]
             },
             "id": "8355df90-4a1d-49b1-bba6-37c3c7d6c0f8",
-            "zIndex": 5,
             "data": {
               "type": "tm.Process",
               "name": "Backend \npresensi",
@@ -613,7 +493,7 @@
           {
             "position": {
               "x": 590,
-              "y": -320
+              "y": -310
             },
             "size": {
               "width": 60,
@@ -631,6 +511,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 6,
             "ports": {
               "groups": {
                 "top": {
@@ -714,7 +595,6 @@
               ]
             },
             "id": "508ad95e-f522-4100-9c4c-2ba1d14d3f3c",
-            "zIndex": 6,
             "data": {
               "type": "tm.Process",
               "name": "Browser",
@@ -732,8 +612,8 @@
           },
           {
             "position": {
-              "x": 820,
-              "y": -195
+              "x": 430,
+              "y": 70
             },
             "size": {
               "width": 120,
@@ -754,6 +634,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 7,
             "ports": {
               "groups": {
                 "top": {
@@ -837,7 +718,6 @@
               ]
             },
             "id": "41edc45b-e7ed-4a5d-98fb-14bbfe328e46",
-            "zIndex": 7,
             "data": {
               "type": "tm.Store",
               "name": "Database akademik",
@@ -874,7 +754,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "1. Login akun kampus\n2. Scan QR",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -888,17 +768,297 @@
               "trustBoundaryIds": []
             },
             "labels": [
-              "Data Flow"
+              "1. Login akun kampus\n2. Scan QR"
             ],
-            "id": "050c0c4b-bae9-42d2-bcd4-7afe7a961ec7",
+            "id": "a8a16437-ffbf-457c-9c22-bb5b40015904",
             "source": {
-              "x": 370,
+              "cell": "7641d07d-d674-4ef9-9482-978eff1c5747",
+              "port": "5b0425bb-353a-40fb-95e9-1032d0a23e6c"
+            },
+            "target": {
+              "cell": "508ad95e-f522-4100-9c4c-2ba1d14d3f3c",
+              "port": "428f86d7-3e5f-4313-9168-3a0ef0d5bf44"
+            },
+            "vertices": [
+              {
+                "x": 400,
+                "y": -145
+              },
+              {
+                "x": 470,
+                "y": -150
+              },
+              {
+                "x": 520,
+                "y": -190
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Sesi login",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Sesi login"
+            ],
+            "id": "11972f58-63bc-4855-b70b-26b4828351f5",
+            "source": {
+              "x": 650,
               "y": -280
             },
             "target": {
-              "x": 470,
-              "y": -180
-            }
+              "cell": "9e7931d0-d3be-4817-9ffa-a4e3aa81964d",
+              "port": "48801c92-5423-403e-9fc0-825aed9f3803"
+            },
+            "vertices": [
+              {
+                "x": 740,
+                "y": -280
+              },
+              {
+                "x": 770,
+                "y": -260
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "1. Buka tutup sesi\n2. Pantau kehadiran\n3. Lihat QR",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "1. Buka tutup sesi\n2. Pantau kehadiran\n3. "
+            ],
+            "id": "650c8753-6f40-41f9-bcd8-4342aa07c0f9",
+            "source": {
+              "cell": "6a673c4f-4acd-4203-a2b4-a5aa4f02e6c7",
+              "port": "5b0425bb-353a-40fb-95e9-1032d0a23e6c"
+            },
+            "target": {
+              "cell": "508ad95e-f522-4100-9c4c-2ba1d14d3f3c",
+              "port": "428f86d7-3e5f-4313-9168-3a0ef0d5bf44"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Request rekapan \nseluruh kelas",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Request rekapan \nseluruh kelas"
+            ],
+            "id": "569bd0b9-6464-40fb-b5de-4144d15b4d9a",
+            "source": {
+              "cell": "d05ef654-3427-4215-a774-d7218fe9fa38",
+              "port": "5b0425bb-353a-40fb-95e9-1032d0a23e6c"
+            },
+            "target": {
+              "cell": "508ad95e-f522-4100-9c4c-2ba1d14d3f3c",
+              "port": "51ede02a-6dcb-4ae7-806e-1286c6a7e888"
+            },
+            "vertices": [
+              {
+                "x": 410,
+                "y": -35
+              },
+              {
+                "x": 520,
+                "y": -70
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Validasi identitas\npengguna",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Validasi identitas\npengguna"
+            ],
+            "id": "5009fd8d-ec3b-4e71-b9c5-d86297c51f87",
+            "source": {
+              "cell": "8355df90-4a1d-49b1-bba6-37c3c7d6c0f8"
+            },
+            "target": {
+              "cell": "9e7931d0-d3be-4817-9ffa-a4e3aa81964d",
+              "port": "0e6904ce-e4d1-445d-8116-6e1f6d5f0f91"
+            },
+            "vertices": [
+              {
+                "x": 730,
+                "y": -20
+              },
+              {
+                "x": 760,
+                "y": -60
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Request \nrekapan",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Request \nrekapan"
+            ],
+            "id": "b7ff07ff-d0db-47fc-83a1-03190d3f784e",
+            "source": {
+              "cell": "508ad95e-f522-4100-9c4c-2ba1d14d3f3c",
+              "port": "51ede02a-6dcb-4ae7-806e-1286c6a7e888"
+            },
+            "target": {
+              "cell": "8355df90-4a1d-49b1-bba6-37c3c7d6c0f8",
+              "port": "618aefb0-9032-4f64-9a69-80247d35ad9c"
+            },
+            "vertices": [
+              {
+                "x": 630,
+                "y": -180
+              }
+            ]
           },
           {
             "shape": "flow",
@@ -936,14 +1096,134 @@
             "labels": [
               "Data Flow"
             ],
-            "id": "2bf8f175-cbca-4127-ab9c-a10a7e101a57",
+            "id": "bf897cde-5848-4a9a-a16a-21ef871e68b4",
             "source": {
-              "x": 361,
-              "y": -195
+              "x": 504,
+              "y": 20
             },
             "target": {
-              "x": 461,
-              "y": -95
+              "x": 604,
+              "y": 120
+            }
+          },
+          {
+            "position": {
+              "x": 750,
+              "y": -195
+            },
+            "size": {
+              "width": 100,
+              "height": 80
+            },
+            "attrs": {
+              "text": {
+                "text": "Autentikasi\nkampus"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "48801c92-5423-403e-9fc0-825aed9f3803"
+                },
+                {
+                  "group": "right",
+                  "id": "85dc1185-4848-4f2e-8408-e103687bbb4a"
+                },
+                {
+                  "group": "bottom",
+                  "id": "0e6904ce-e4d1-445d-8116-6e1f6d5f0f91"
+                },
+                {
+                  "group": "left",
+                  "id": "d9a25496-4f41-46b0-bacf-234d4ae0b500"
+                }
+              ]
+            },
+            "id": "9e7931d0-d3be-4817-9ffa-a4e3aa81964d",
+            "zIndex": 11,
+            "data": {
+              "type": "tm.Process",
+              "name": "Autentikasi\nkampus",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": []
             }
           }
         ]
