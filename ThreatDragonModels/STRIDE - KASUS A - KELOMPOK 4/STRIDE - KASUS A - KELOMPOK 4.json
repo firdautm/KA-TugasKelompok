@@ -21,7 +21,7 @@
         "cells": [
           {
             "position": {
-              "x": 207.5,
+              "x": 198.75,
               "y": -175
             },
             "size": {
@@ -138,8 +138,8 @@
           },
           {
             "position": {
-              "x": 207.5,
-              "y": -65
+              "x": 198.75,
+              "y": -45
             },
             "size": {
               "width": 112.5,
@@ -372,8 +372,8 @@
           },
           {
             "position": {
-              "x": 640,
-              "y": -50
+              "x": 805,
+              "y": -125
             },
             "size": {
               "width": 70,
@@ -492,8 +492,8 @@
           },
           {
             "position": {
-              "x": 590,
-              "y": -310
+              "x": 560,
+              "y": -175
             },
             "size": {
               "width": 60,
@@ -612,8 +612,8 @@
           },
           {
             "position": {
-              "x": 420,
-              "y": 50
+              "x": 780,
+              "y": 80
             },
             "size": {
               "width": 120,
@@ -754,6 +754,62 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
+              "name": "1. Buka tutup sesi\n2. Pantau kehadiran\n3. Lihat QR",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "1. Buka tutup sesi\n2. Pantau kehadiran\n3. Lihat QR"
+            ],
+            "id": "650c8753-6f40-41f9-bcd8-4342aa07c0f9",
+            "source": {
+              "cell": "6a673c4f-4acd-4203-a2b4-a5aa4f02e6c7",
+              "port": "5b0425bb-353a-40fb-95e9-1032d0a23e6c"
+            },
+            "target": {
+              "cell": "508ad95e-f522-4100-9c4c-2ba1d14d3f3c",
+              "port": "618aefb0-9032-4f64-9a69-80247d35ad9c"
+            },
+            "vertices": [
+              {
+                "x": 540,
+                "y": -280
+              },
+              {
+                "x": 590,
+                "y": -260
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
               "name": "1. Login akun kampus\n2. Scan QR",
               "description": "",
               "outOfScope": false,
@@ -779,20 +835,7 @@
               "cell": "508ad95e-f522-4100-9c4c-2ba1d14d3f3c",
               "port": "428f86d7-3e5f-4313-9168-3a0ef0d5bf44"
             },
-            "vertices": [
-              {
-                "x": 400,
-                "y": -145
-              },
-              {
-                "x": 470,
-                "y": -150
-              },
-              {
-                "x": 520,
-                "y": -190
-              }
-            ]
+            "vertices": []
           },
           {
             "shape": "flow",
@@ -832,21 +875,17 @@
             ],
             "id": "11972f58-63bc-4855-b70b-26b4828351f5",
             "source": {
-              "x": 650,
-              "y": -280
+              "x": 620,
+              "y": -150
             },
             "target": {
               "cell": "9e7931d0-d3be-4817-9ffa-a4e3aa81964d",
-              "port": "48801c92-5423-403e-9fc0-825aed9f3803"
+              "port": "d9a25496-4f41-46b0-bacf-234d4ae0b500"
             },
             "vertices": [
               {
-                "x": 740,
-                "y": -280
-              },
-              {
-                "x": 770,
-                "y": -260
+                "x": 730,
+                "y": -240
               }
             ]
           },
@@ -859,7 +898,7 @@
                   "name": "block"
                 },
                 "sourceMarker": {
-                  "name": ""
+                  "name": "block"
                 },
                 "strokeDasharray": null
               }
@@ -870,13 +909,13 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "1. Buka tutup sesi\n2. Pantau kehadiran\n3. Lihat QR",
+              "name": "Request \nrekapan",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
-              "isBidirectional": false,
+              "isBidirectional": true,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
@@ -884,16 +923,115 @@
               "trustBoundaryIds": []
             },
             "labels": [
-              "1. Buka tutup sesi\n2. Pantau kehadiran\n3. "
+              "Request \nrekapan"
             ],
-            "id": "650c8753-6f40-41f9-bcd8-4342aa07c0f9",
+            "id": "b7ff07ff-d0db-47fc-83a1-03190d3f784e",
             "source": {
-              "cell": "6a673c4f-4acd-4203-a2b4-a5aa4f02e6c7",
-              "port": "5b0425bb-353a-40fb-95e9-1032d0a23e6c"
+              "cell": "508ad95e-f522-4100-9c4c-2ba1d14d3f3c",
+              "port": "51ede02a-6dcb-4ae7-806e-1286c6a7e888"
             },
             "target": {
-              "cell": "508ad95e-f522-4100-9c4c-2ba1d14d3f3c",
+              "cell": "8355df90-4a1d-49b1-bba6-37c3c7d6c0f8",
               "port": "428f86d7-3e5f-4313-9168-3a0ef0d5bf44"
+            },
+            "vertices": [
+              {
+                "x": 630,
+                "y": -90
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Validasi identitas\npengguna",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Validasi identitas\npengguna"
+            ],
+            "id": "5009fd8d-ec3b-4e71-b9c5-d86297c51f87",
+            "source": {
+              "cell": "8355df90-4a1d-49b1-bba6-37c3c7d6c0f8",
+              "port": "618aefb0-9032-4f64-9a69-80247d35ad9c"
+            },
+            "target": {
+              "cell": "9e7931d0-d3be-4817-9ffa-a4e3aa81964d",
+              "port": "0e6904ce-e4d1-445d-8116-6e1f6d5f0f91"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Baca dan tulis\nsetiap sesi",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Baca dan tulis\nsetiap sesi"
+            ],
+            "id": "fb6f02b0-e5af-4029-9200-1f7ee5bbaa57",
+            "source": {
+              "cell": "41edc45b-e7ed-4a5d-98fb-14bbfe328e46",
+              "port": "e054e344-1cbe-4ec5-893e-e16c05f7e4fc"
+            },
+            "target": {
+              "cell": "8355df90-4a1d-49b1-bba6-37c3c7d6c0f8",
+              "port": "51ede02a-6dcb-4ae7-806e-1286c6a7e888"
             },
             "vertices": []
           },
@@ -944,129 +1082,22 @@
             },
             "vertices": [
               {
-                "x": 410,
-                "y": -35
+                "x": 540,
+                "y": -15
               },
               {
-                "x": 520,
-                "y": -70
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": "block"
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Validasi identitas\npengguna",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": true,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              "Validasi identitas\npengguna"
-            ],
-            "id": "5009fd8d-ec3b-4e71-b9c5-d86297c51f87",
-            "source": {
-              "cell": "8355df90-4a1d-49b1-bba6-37c3c7d6c0f8"
-            },
-            "target": {
-              "cell": "9e7931d0-d3be-4817-9ffa-a4e3aa81964d",
-              "port": "0e6904ce-e4d1-445d-8116-6e1f6d5f0f91"
-            },
-            "vertices": [
-              {
-                "x": 730,
-                "y": -20
-              },
-              {
-                "x": 760,
-                "y": -60
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": "block"
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Request \nrekapan",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": true,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              "Request \nrekapan"
-            ],
-            "id": "b7ff07ff-d0db-47fc-83a1-03190d3f784e",
-            "source": {
-              "cell": "508ad95e-f522-4100-9c4c-2ba1d14d3f3c",
-              "port": "51ede02a-6dcb-4ae7-806e-1286c6a7e888"
-            },
-            "target": {
-              "cell": "8355df90-4a1d-49b1-bba6-37c3c7d6c0f8",
-              "port": "618aefb0-9032-4f64-9a69-80247d35ad9c"
-            },
-            "vertices": [
-              {
-                "x": 630,
-                "y": -180
+                "x": 590,
+                "y": -40
               }
             ]
           },
           {
             "position": {
-              "x": 750,
-              "y": -195
+              "x": 800,
+              "y": -330
             },
             "size": {
-              "width": 100,
+              "width": 80,
               "height": 80
             },
             "attrs": {
@@ -1181,121 +1212,38 @@
             }
           },
           {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
+            "shape": "trust-boundary-curve",
             "width": 200,
             "height": 100,
             "zIndex": 12,
             "connector": "smooth",
             "data": {
-              "type": "tm.Flow",
-              "name": "Data Flow",
+              "type": "tm.Boundary",
+              "name": "Trust Boundary",
               "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
+              "isTrustBoundary": true,
               "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
+              "crossingFlows": [],
+              "containedElements": []
             },
             "labels": [
-              "Data Flow"
+              "Trust Boundary"
             ],
-            "id": "bf897cde-5848-4a9a-a16a-21ef871e68b4",
+            "id": "f59e6b45-9589-4336-9091-531211436aea",
             "source": {
-              "cell": "41edc45b-e7ed-4a5d-98fb-14bbfe328e46",
-              "port": "e054e344-1cbe-4ec5-893e-e16c05f7e4fc"
+              "x": 130,
+              "y": -280
             },
             "target": {
-              "cell": "8355df90-4a1d-49b1-bba6-37c3c7d6c0f8",
-              "port": "428f86d7-3e5f-4313-9168-3a0ef0d5bf44"
+              "x": 130,
+              "y": -110
             },
             "vertices": [
               {
-                "x": 530,
-                "y": 20
+                "x": 130,
+                "y": -170
               }
-            ],
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead"
-              ],
-              "name": null
-            }
+            ]
           }
         ]
       }
