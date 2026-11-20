@@ -4,12 +4,22 @@
   "released_at": "",
   "summary": {
     "title": "STRIDE - KASUS A - KELOMPOK 4",
-    "owner": "Firda U",
+    "owner": "Firda Utami Sukman (103072400147)",
     "description": "",
     "id": 0
   },
   "detail": {
-    "contributors": [],
+    "contributors": [
+      {
+        "name": "Kadek Amelya Anasthasya Putri (103072400072)"
+      },
+      {
+        "name": "Talitha Fairuzzahwa Nirwasita (103072400035)"
+      },
+      {
+        "name": "Difa Auliya Andini Putri (103072400112)"
+      }
+    ],
     "diagrams": [
       {
         "id": 0,
