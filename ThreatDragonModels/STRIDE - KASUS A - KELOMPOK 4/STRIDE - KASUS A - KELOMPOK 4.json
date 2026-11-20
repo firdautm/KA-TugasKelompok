@@ -133,7 +133,32 @@
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "f260adb8-6397-46a1-9682-524175e84f12",
+                  "title": "Titip Absen",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Jika mahasiswa yang tidak berada di ruang kelas atau tidak terdaftar di kelas memperoleh QR code sesi aktif dan mengirimkannya melalui browser ke Backend Presensi, maka bisa terjadi pencatatan kehadiran tidak sah. \nAsumsi: QR code bersifat statis selama sesi berlangsung (maksimal 5 menit atau sebelum ditutup dosen). \nDampak: data kehadiran pada Database Akademik menjadi tidak akurat.",
+                  "mitigation": "Notifikasi login baru, Session timeout, Batasi satu sesi aktif per akun.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": "6"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 0
+              }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -1250,6 +1275,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 0
+    "threatTop": 1
   }
 }
