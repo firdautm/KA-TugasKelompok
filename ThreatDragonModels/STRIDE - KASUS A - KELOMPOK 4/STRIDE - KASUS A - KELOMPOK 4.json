@@ -612,8 +612,8 @@
           },
           {
             "position": {
-              "x": 430,
-              "y": 70
+              "x": 420,
+              "y": 50
             },
             "size": {
               "width": 120,
@@ -1061,52 +1061,6 @@
             ]
           },
           {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Data Flow",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              "Data Flow"
-            ],
-            "id": "bf897cde-5848-4a9a-a16a-21ef871e68b4",
-            "source": {
-              "x": 504,
-              "y": 20
-            },
-            "target": {
-              "x": 604,
-              "y": 120
-            }
-          },
-          {
             "position": {
               "x": 750,
               "y": -195
@@ -1127,6 +1081,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 11,
             "ports": {
               "groups": {
                 "top": {
@@ -1210,7 +1165,6 @@
               ]
             },
             "id": "9e7931d0-d3be-4817-9ffa-a4e3aa81964d",
-            "zIndex": 11,
             "data": {
               "type": "tm.Process",
               "name": "Autentikasi\nkampus",
@@ -1224,6 +1178,52 @@
               "isWebApplication": false,
               "privilegeLevel": "",
               "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 12,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Data Flow"
+            ],
+            "id": "bf897cde-5848-4a9a-a16a-21ef871e68b4",
+            "source": {
+              "x": 504,
+              "y": 20
+            },
+            "target": {
+              "cell": "8355df90-4a1d-49b1-bba6-37c3c7d6c0f8",
+              "port": "428f86d7-3e5f-4313-9168-3a0ef0d5bf44"
             }
           }
         ]
