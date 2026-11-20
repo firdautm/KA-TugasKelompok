@@ -1219,7 +1219,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Boundary",
-              "name": "Trust Boundary",
+              "name": "",
               "description": "",
               "isTrustBoundary": true,
               "hasOpenThreats": false,
@@ -1227,23 +1227,17 @@
               "containedElements": []
             },
             "labels": [
-              "Trust Boundary"
+              ""
             ],
-            "id": "f59e6b45-9589-4336-9091-531211436aea",
+            "id": "bcb917f8-13e1-49a2-a18d-4988ea7f9f38",
             "source": {
-              "x": 130,
-              "y": -280
+              "x": 720,
+              "y": -360
             },
             "target": {
-              "x": 130,
-              "y": -110
-            },
-            "vertices": [
-              {
-                "x": 130,
-                "y": -170
-              }
-            ]
+              "x": 720,
+              "y": 160
+            }
           }
         ]
       }
